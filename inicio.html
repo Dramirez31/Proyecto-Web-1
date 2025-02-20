@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Agencia de Carros</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="imagenes/logo-carro.png">      
+    <link href="css/estilos.css" rel="stylesheet">    
+    <style>
+      body {
+        background: url('imagenes/fondo.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      main {
+        flex: 1;
+        margin: 50px auto;
+        width: 80%;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .servicio {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 10px;
+      }
+      footer {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>  
+  
+  <body>
+    <header>
+      <h1>Bienvenido a Agencia de Carros</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="landing.html">Trabajos Finales</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section>
+        <h2>Explora Nuestros Modelos</h2>
+        <p>Descubre los últimos modelos de autos en nuestra agencia.</p>
+      </section>
+      
+      <section>
+        <h2>Servicios</h2>
+        <div class="servicios">
+          <div class="servicio">
+            <h3>Venta de Autos</h3>
+            <p>Encuentra autos nuevos y usados al mejor precio.</p>
+          </div>
+          <div class="servicio">
+            <h3>Financiamiento</h3>
+            <p>Opciones flexibles de financiamiento y leasing.</p>
+          </div>
+          <div class="servicio">
+            <h3>Mantenimiento</h3>
+            <p>Servicios de mantenimiento y asistencia técnica.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Agencia de Carros. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
