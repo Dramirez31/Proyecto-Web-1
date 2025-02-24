@@ -1,2 +1,2 @@
 Link Repositorio GitHub: https://github.com/Dramirez31/Proyecto-Web-1/tree/Tarea2
-Link Pagina Web Tarea 2: http://127.0.0.1:5500/index.html
+Link Pagina Web Tarea 2: https://dramirez31.github.io/Proyecto-Web-1/
