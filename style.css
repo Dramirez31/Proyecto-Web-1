@@ -1,0 +1,202 @@
+/* --- ESTRUCTURA GENERAL --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* asegura que ocupe toda la altura visible */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: #fff8f0;
+  color: #333;
+  background-size: cover;
+  background-position: center;
+}
+
+/* el contenido principal ocupa el espacio restante */
+main {
+  flex: 1;
+}
+
+/* --- HEADER --- */
+header {
+  background: linear-gradient(135deg, #30b222, #e63946);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* --- NAV --- */
+nav ul {
+  list-style: none;
+  background: #ffffff;
+  margin: 0;
+  padding: 0.8rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav li {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+  color: #ffebcd;
+}
+
+/* --- CONTENEDORES --- */
+.container, .login-container {
+  margin-top: 10%;
+}
+
+/* --- BOTONES --- */
+.btn {
+  background: #5c39e6;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background: #b22222;
+  transform: scale(1.05);
+}
+
+/* --- TARJETAS --- */
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 1rem;
+  width: 250px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* --- FOOTER --- */
+footer {
+  background: linear-gradient(135deg, #e63946, #06af0c);
+  color: white;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* <--- Esto lo fija al final */
+}
+
+/* --- FONDOS POR PÁGINA --- */
+.index-page {
+  background-image: url('fondo-inicio.jpg');
+}
+
+.login-page {
+  background-image: url('fondo-login.jpg');
+}
+
+.landing-page {
+  background-image: url('fondo-landing.jpg');
+}
+
+.inicio-page {
+  background-image: url('fondo-home.jpg');
+}
+
+body.index-page,
+body.login-page,
+body.landing-page,
+body.inicio-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* --- Capa semitransparente sobre el fondo --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* Blanco semitransparente */
+  z-index: -1;
+}
+
+/* --- GALERÍA DE PLATILLOS --- */
+.galeria {
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.galeria h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 1.5rem;
+  color: #b22222;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.galeria-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.plato {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plato:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.plato img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.plato p {
+  margin: 0;
+  padding: 1rem;
+  font-weight: bold;
+  color: #333;
+  background: #fff8f0;
+}
